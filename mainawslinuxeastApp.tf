@@ -31,7 +31,7 @@ resource "aws_security_group" "web_server_sg" {
 
 # Define EC2 Instance for the web server
 resource "aws_instance" "web_server" {
-  ami                    = "ami-0c55b159cbfafe1f0"  # Amazon Linux 2 AMI ID (us-east-1)
+  ami                    = "ami-0004c164b2bb803ba"  # Amazon Linux 2 AMI ID (us-east-1)
   instance_type          = "t2.micro"                # Choose instance size (t2.micro for free tier)
   key_name               = aws_key_pair.server_key.key_name  # Reference the SSH key pair
   security_groups        = [aws_security_group.web_server_sg.name]  # Attach the security group
